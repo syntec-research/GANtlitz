@@ -24,7 +24,7 @@ function imageZoom(imgID, resultID) {
     cy = result.offsetHeight / lens.offsetHeight;
     
     segments = high_res_path.split('/')
-    high_res_path_mod = segments.slice(0, -1).concat(modality.slice(1, modality.length) + ".png").join('/')
+    high_res_path_mod = segments.slice(0, -1).concat(modality.slice(1, modality.length) + ".jpg").join('/')
     console.log(high_res_path_mod)
     result.style.backgroundImage = "url('" + high_res_path_mod + "')";
     result.style.backgroundSize = (img.width * cx) + "px " + (img.height * cy) + "px";  
@@ -257,7 +257,7 @@ $(document).ready(function() {
 
       document.getElementById("noise-sampling").src = [
         current_subject.split('/').slice(0, -1).join('/'), 
-        subject.toString().padStart(7, '0') + '_' + sample.toString().padStart(3, '0') + '.png'        
+        subject.toString().padStart(7, '0') + '_' + sample.toString().padStart(3, '0') + '.jpg'        
       ].join('/')
 
       sample_counter = document.getElementById("sample-counter")
