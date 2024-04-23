@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="GANtlitz">
+  <meta name="keywords" content="GANtlitz">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GANtlitz</title>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="./static/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <!--<script src=".static/js/jquery.min.js"></script>-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+
+<style>
+  .rotate_image {
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    transform: rotate(270deg);
+    margin: 100px 0 50px 0;
+  }
+</style>
+
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">GANtlitz: Ultra High Resolution Generative Model for Multi-Modal
+              Face Textures</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <div>Aurel Gruber<sup>1, 2</sup></div> <div>Edo Collins<sup>2</sup></div>  <div>Abhimitra Meka<sup>2</sup></div> <div>Franziska Mueller<sup>2</sup></div>  <div>Kripasindhu Sarkar<sup>2</sup></div> 
+                <div>aurel.gruber@inf.ethz.ch</div>      <div>edocollins@google.com</div>  <div>abhim@google.com</div>         <div>franziskamu@google.com</div>       <div>krsarkar@</div>          
+              </span>
+              <span class="author-block">
+                <div>Sergio Orts Escolano<sup>2</sup></div> <div>Luca Prasso<sup>2</sup></div>  <div>Jay Busch<sup>2</sup></div>  <div>Markus Gross<sup>1</sup></div>       <div>Thabo Beeler<sup>2</sup></div>
+                <div>sorts@google.com</div>               <div>lprasso@google.com</div>      <div>jbusch@google.com</div>     <div>grossm@inf.ethz.ch</div> <div>tbeeler@google.com</div>
+              </span>
+            </div>
+            <center>
+              <span class="affiliation">
+                <div><sup>1</sup>ETH Zurich, Switzerland</div>
+                <div><sup>2</sup>Google</div>
+              </span>
+            </center>
+          </div>         
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <div class="column is-centered has-text-centered">
+    <div class="container">
+      <div class="columns">
+        <div class="column">
+          <div class="column">
+            <div class="item">
+              <img src="./static/images/teaser.png" alt="Italian Trulli" height="100%">
+            </div>
+            <a
+              href="https://drive.google.com/file/d/1l39Qjn9iFSwk2VyGiSMzgJRq9CtyYQFA/view?usp=drive_link">Paper</a>|
+            <a
+              href="https://drive.google.com/file/d/1kYVhfi5bQO9_qH9yIgQ8uvtdq5bcYBKo/view?usp=drive_link">Video</a>|
+            <a
+              href="https://drive.google.com/file/d/1QGbwGhfF43HpmPMqj31lekONPPZB2Ey3/view?usp=drive_link">Supplemental</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            High-resolution texture maps are essential to render photoreal digital humans for visual effects or to
+            generate data for machine learning.
+            The acquisi- tion of high resolution assets at scale is cumbersome, it involves enrolling a large number of
+            human subjects,
+            using expensive multi-view camera setups, and significant manual artistic effort to align the textures.
+            To alleviate these problems, we introduce GANtlitz, a generative model that can synthesize multi-modal
+            ultra-high-resolution face appearance maps for
+            novel identities. Our method solves three distinct challenges: 1) unavailability of a
+            very large data corpus generally required for training generative models, 2) memory and
+            computational limitations of training a GAN at ultra-high resolutions, and 3) consistency of appearance
+            features such as skin color, pores and wrinkles in high-resolution textures across different modalities.
+            We introduce dual-style blocks, an extension to the style blocks of the StyleGAN2 architecture, which
+            improve multi-modal synthesis.
+            Our patch-based architecture is trained only on image patches obtained from a small set of face textures
+            (&lt;100) and yet allows us to
+            generate seamless appearance maps of novel identities at 6𝑘 × 4𝑘 resolution. Extensive qualitative and
+            quantitative evaluations and baseline
+            comparisons show the efficacy of our proposed system.
+          </div>
+        </div>
+      </div>
+      <!--/ Abstract. -->
+    </div>
+  </section>
+
+  <hr style="width:30%; margin: auto;" />
+
+  <section class="section">
+    <div class="column is-centered has-text-centered">
+      <h1 class="title is-3">Method</h1>
+      <img id="method_diagram" src="./static/images/method_diagram.svg" class="method-diagram">
+    </div>
+    <div class="container is-max-desktop">
+      <div class="column is-centered has-text-centered">
+        <div class="content">
+          <div class="content has-text-justified">
+
+            During training we sample overlapping patches of 512 × 512 from our data set. We prompt our StyleGAN2-based
+            generator to produce patches for the same locations.
+            Due to the aligned nature of our UV textures training-set, we can facilitate the generator’s task by
+            multiplying the UV layout mask onto the generated
+            samples. These real and fake samples are augmented before being fed to a patch location aware discriminator.
+            While we apply several augmentations at an adaptive rate based
+            on the discriminator performance in line with prior work, we additionally apply a frequency mid-band filter
+            with random frequency bands at a constant rate.
+            This augmentation directs the discriminator’s attention equally at all frequencies and yields a more
+            frequency diverse generator.
+
+          </div>
+          <div class="style-block">
+            <img src="./static/images/style_block short.svg" class="style-block-figure">
+            <div class="style-block-description">
+              Multi-modal generation is achieved with a mechanism we term dual-style blocks. In this setting, the
+              generator is
+              conditioned on the desired modality, and the generation of multimodal samples is done over successive
+              evaluations, one per modality.
+              The conditioning input is a per-modality learned embedding. These
+              embeddings are utilized as additional style inputs and learned bias
+              offsets for each style block in convolutional layers.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="column is-centered has-text-centered">
+        <div class="content">
+          <h1 class="title is-3">Results</h1>
+          <div class="content has-text-justified">
+
+            <p>
+              * We recommend using the Chrome or Safari browser to correctly display all visuals.
+
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <div class="column is-centered has-text-centered">
+    <div class="content">
+      <h3 class="has-text-centered">Sample Gallery</h4>
+    </div>
+    <div class="container is-max-desktop">
+      <div class="column is-centered has-text-centered">
+        <div class="content has-text-justified">
+          <div class="my_text">The following samples were generated with our method. Note the high level of detail and
+            good global consistency. For more samples and interactive zooming see the section <a
+              href="#full-samples">Full Samples</a>.</div>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <img src="./static/images/samples.jpeg" alt="Italian Trulli" height="100%" id="sample-gallery">
+    </div>
+
+  </div>
+
+
+  <div class="column is-centered has-text-centered">
+    <div class="content">
+      <h3 class="has-text-centered">Latent Interpolation</h4>
+    </div>
+    <div class="container is-max-desktop">
+      <div class="column is-centered has-text-centered">
+        <div class="content has-text-justified">
+          <div class="my_text">Despite training on less than 100 samples, we obtain a smooth latent space as conveyed by this animation. Note that the noise maps remain fixed. See the next section for noise map sampling.</div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="column">
+        <div class="content">
+          <video autoplay muted loop controls>
+            <source src="./static/images/Latent_Interpolation.mp4" type="video/mp4" class="full-size-video">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="column is-centered has-text-centered">
+    <div class="content">
+      <h3 class="has-text-centered">Noise Sampling </h4>
+    </div>
+    <div class="container is-max-desktop">
+      <div class="column is-centered has-text-centered">
+        <div class="content has-text-justified">
+          <div class="my_text">
+            <p>The StyleGAN Architecture additionally enables the resampling of the noise map inputs. while the coarse
+              structure is preserved, novel variation of wrinkle and freckle patterns appear.</p>
+            <i>(Click to sample noise, double-click to cycle zoom levels.)</i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <select name="noise_dropdown" id="noise_dropdown" class="dropdowns">
+      <option value=1>Subject 1</option>
+      <option value=4>Subject 4</option>
+      <option value=9>Subject 9</option>
+      <option value=11>Subject 11</option>
+      <option value=14>Subject 14</option>
+      <option value=20>Subject 20</option>
+    </select>
+    <div class="container">
+      <div class="column">
+        <div class="content noise-sampling-container">
+          <img id='noise-sampling' src="./static/images/noise_sampling/ALBEDO/0000001_000.png" class="noise-sampling">
+          <div id="sample-counter">Sample 0/3</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="column is-centered has-text-centered">
+    <div class="content">
+      <h3 id='full-samples' class="has-text-centered">Full Samples</h4>
+    </div>
+    <div class="container is-max-desktop">
+      <div class="column is-centered has-text-centered">
+        <div class="content has-text-justified">
+          <div class="my_text">
+            The following offers a more interactive exploration of some generated samples. The zoom windows at the
+            bottom allow the inspection of arbitrary regions close-up.
+          </div>
+        </div>
+      </div>
+    </div>
+    <select name="sample_dropdown" id="sample_dropdown" class="dropdowns">
+      <option value="subject_48">Subject 48</option>
+      <option value="subject_169">Subject 169</option>
+      <option value="subject_194">Subject 194</option>
+    </select>
+    <div class="container">
+      <div class="column">
+        <div class="content">
+          <div class="img-zoom-container">
+            <img id="sample_1_albedo" src="./static/images/full_samples_low_res/subject_48/albedo.png" class="img-mod">
+            <img id="sample_1_spec" src="./static/images/full_samples_low_res/subject_48/spec.png"
+              class="img-mod img-mod-overlay">
+            <img id="sample_1_normals" src="./static/images/full_samples_low_res/subject_48/normals.png"
+              class="img-mod img-mod-overlay">
+            <img id="sample_1_disp" src="./static/images/full_samples_low_res/subject_48/disp.png"
+              class="img-mod img-mod-overlay">
+            <div id="sample_1_cover" class="img-mod"></div>
+
+
+            <div id="sample_1_zoom_albedo" class="img-zoom-result zoom-albedo"></div>
+            <div id="sample_1_zoom_spec" class="img-zoom-resul zoom-spec"></div>
+            <div id="sample_1_zoom_normals" class="img-zoom-result zoom-normals"></div>
+            <div id="sample_1_zoom_disp" class="img-zoom-result zoom-disp"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="column is-centered has-text-centered">
+      <div class="content">
+        <h1 class="has-text-centered">Applications </h4>
+      </div>
+
+      <div class="container is-max-desktop">
+        <div class="column is-centered has-text-centered">
+          <div class="content has-text-justified">
+            <div class="my_text">
+              On top of sample generation the model allows for som intriguing applications based on inversion. We
+              present two: Modality completion and super resolution.
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="content">
+        <h3 class="has-text-centered">Modality Completion </h4>
+      </div>
+
+      <div class="container is-max-desktop">
+        <div class="column is-centered has-text-centered">
+          <div class="content has-text-justified">
+            <div class="my_text">
+              Given a target albedo map, we can invert the texture into our model while conditioning the generator on the albedo embedding. Subsequently, we can generate the other modalitites through separate generator evaluations conditioned on the respective embeddings. 
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <select name="modality_completion_dropdown" id="modality_completion_dropdown" class="dropdowns">
+        <option value=HDM024>Subject 24</option>
+        <option value=HDF025>Subject 25</option>
+        <option value=HDM031>Subject 31</option>
+        <option value=HDF043>Subject 43</option>
+      </select>
+      <div class="container">
+        <div class="column">
+          <div class="content modality-completion-container">
+            <img id='modality-completion' src="./static/images/modality_completion/HDM024.jpg"
+              class="modality-completion">
+            <div id="mc-target">Target</div>
+            <div id="mc-albedo">Albedo Fit</div>
+            <div id="mc-spec">Generated Specular Map</div>
+            <div id="mc-norm">Generated Normal Map</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="column is-centered has-text-centered">
+      <div class="content">
+        <h3 class="has-text-centered">Super Resolution </h4>
+      </div>
+
+      <div class="container is-max-desktop">
+        <div class="column is-centered has-text-centered">
+          <div class="content has-text-justified">
+            <div class="my_text">
+              We can also fit to a low resolution target. Some additional care must be taken to avoid degenerate pixels due to the many-to-one dynamic. And we can afterwards again generate the other modalities as well.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <select name="super_resolution_dropdown" id="super_resolution_dropdown" class="dropdowns">
+        <option value=HDM023>Subject 23</option>
+        <option value=HDM024>Subject 24</option>
+        <option value=HDF025>Subject 25</option>
+        <option value=HDM040>Subject 40</option>
+        <option value=HDF045>Subject 45</option>
+      </select>
+      <div class="container">
+        <div class="column">
+          <div class="content super-resolution-container">
+            <img id='super-resolution' src="./static/images/super_resolution/HDM023.jpg" class="super-resolution">
+            <div id="sr-target">Target</div>
+            <div id="sr-albedo-lr">Low Res Albedo Fit</div>
+            <div id="sr-albedo">Generated Albedo</div>
+            <div id="sr-spec">Generated Specular Map</div>
+            <div id="sr-norm">Generated Normal Map</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Add custom js here.
+  </script>
+
+
+</body>
+
+</html>
